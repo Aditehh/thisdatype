@@ -1,21 +1,32 @@
 "use strict";
-//generics in ts called typescript
 Object.defineProperty(exports, "__esModule", { value: true });
-const score = [];
-const names = [];
-function identityOne(val) {
-    return val;
+function bananas(banana) {
+    return banana;
 }
-function identityTwo(val) {
-    return val;
+function messi(n) {
+    return n;
 }
-function identityThree(val) {
-    return val;
+function messistring(n) {
+    return n;
 }
-// identityThree(3)
-function identityFour(val) {
-    return val;
+// generic arrays
+function makearray(value) {
+    return [value];
 }
-identityFour({ brand: "samsung", type: 55 });
-// how array work in generics
+makearray(10);
+makearray("ram");
+makearray({ id: 1 });
+//pairing values
+function pair(a, b) {
+    return [a, b];
+}
+pair(1, 2);
+pair("a", "b");
+pair(1, "b"); // ts is illegal as in pair we should have values having same type
+const numberbanana = bananas(45);
+const stringbanana = bananas("BANANAS");
+const booleanbanana = bananas(false);
+console.log(numberbanana);
+console.log(stringbanana);
+console.log(booleanbanana);
 //# sourceMappingURL=generics.js.map

@@ -1,33 +1,42 @@
-//generics in ts called typescript
-
-const score: Array<number> = []
-const names: Array<string> = []
-
-function identityOne(val: boolean | number): boolean | number {
-    return val
+function bananas<T>(banana: T) { // ts is a generic function where we can initialize once and can be used for different types such as string number boolean and etc;
+    return banana
 }
 
-
-function identityTwo(val: any): any {
-    return val
+function messi(n: number): number { // this is a normal function where we have to write different functions for same type of works
+    return n;
+}
+function messistring(n: string): string {
+    return n;
 }
 
-function identityThree<Type>(val: Type): Type {
-    return val
+// generic arrays
+
+function makearray<T>(value: T): T[] {
+    return [value]
 }
 
-// identityThree(3)
+makearray(10);
+makearray("ram");
+makearray({ id: 1 })
 
-function identityFour<T>(val: T) {
-    return val
+
+
+//pairing values
+
+function pair<T>(a: T, b:T) {
+    return [a,b];
 }
 
-interface Bottle {
-    brand: string,
-    type: number
-}
-
-identityFour<Bottle>({ brand: "samsung", type: 55 })
+pair(1,2);
+pair("a", "b");
+pair(1,"b"); // ts is illegal as in pair we should have values having same type
 
 
-// how array work in generics
+
+const numberbanana = bananas(45)
+const stringbanana = bananas("BANANAS")
+const booleanbanana = bananas(false)
+
+console.log(numberbanana)
+console.log(stringbanana)
+console.log(booleanbanana)
