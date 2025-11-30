@@ -7,8 +7,24 @@ class clickpicture {
         this.cameramode = cameramode;
         this.filter = filter;
     }
+    getreeltime() {
+        return 8;
+    }
 }
 class instagram extends clickpicture {
+    cameramode;
+    filter;
+    burst;
+    constructor(cameramode, filter, burst) {
+        super(cameramode, filter);
+        this.cameramode = cameramode;
+        this.filter = filter;
+        this.burst = burst;
+    }
+    getsepia() {
+        console.log("sepia");
+    }
 }
-const hc = new instagram("potrait", "vintage");
+const hc = new instagram("potrait", "vintage", 3);
+hc.getreeltime();
 //# sourceMappingURL=abstract.js.map
