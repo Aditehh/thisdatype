@@ -4,15 +4,11 @@ abstract class clickpicture {
         public filter: string
     ) { }
 
-
     abstract getsepia(): void
     getreeltime(): number {
         return 8
     }
 }
-
-
-
 
 class instagram extends clickpicture {
     constructor(
@@ -29,5 +25,6 @@ class instagram extends clickpicture {
 
 }
 
+const hc = new instagram("potrait", "vintage", 3)
 
-const hc = new instagram("potrait", "vintage",3)
+hc.getreeltime()
