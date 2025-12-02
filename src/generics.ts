@@ -68,7 +68,10 @@ interface course {
 
 class Sellabe<T> {
     public cart: T[] =[]
-    
+
+    addToCart(product: T) {
+        this.cart.push(product)
+    }
 }
 
 
