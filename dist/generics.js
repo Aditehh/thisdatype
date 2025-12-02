@@ -33,7 +33,9 @@ function anotherFunction(valOne, valTwo) {
         valTwo
     };
 }
-// anotherFunction(3, {})
+class Sellabe {
+    cart = [];
+}
 const printfirstduo = duo(1, "apple");
 const printsecondduo = duo(true, "messi");
 const numberbanana = bananas(45);

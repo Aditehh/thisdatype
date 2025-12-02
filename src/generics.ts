@@ -55,7 +55,21 @@ function anotherFunction<T, U extends Database>(valOne: T, valTwo: U): object {
 
 // anotherFunction(3, {})
 
+interface Quiz {
+    name: string,
+    type: string
+}
 
+interface course {
+    name: string,
+    author: string,
+    subject: string
+}
+
+class Sellabe<T> {
+    public cart: T[] =[]
+    
+}
 
 
 
