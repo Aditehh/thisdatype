@@ -22,7 +22,20 @@ function pair(a, b) {
 }
 pair(1, 2);
 pair("a", "b");
-pair(1, "b"); // ts is illegal as in pair we should have values having same type
+// pair(1, "b"); // ts is illegal as in pair we should have values having same type
+// generics for creating flexible data structures
+function duo(x, y) {
+    return [x, y];
+}
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+// anotherFunction(3, {})
+const printfirstduo = duo(1, "apple");
+const printsecondduo = duo(true, "messi");
 const numberbanana = bananas(45);
 const stringbanana = bananas("BANANAS");
 const booleanbanana = bananas(false);

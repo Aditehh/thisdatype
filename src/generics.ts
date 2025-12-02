@@ -23,14 +23,48 @@ makearray({ id: 1 })
 
 //pairing values
 
-function pair<T>(a: T, b:T) {
-    return [a,b];
+function pair<T>(a: T, b: T) {
+    return [a, b];
 }
 
-pair(1,2);
+pair(1, 2);
 pair("a", "b");
-pair(1,"b"); // ts is illegal as in pair we should have values having same type
+// pair(1, "b"); // ts is illegal as in pair we should have values having same type
 
+
+// generics for creating flexible data structures
+
+function duo<A, B>(x: A, y: B) {
+    return [x, y]
+}
+
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+
+function anotherFunction<T, U extends Database>(valOne: T, valTwo: U): object {
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+// anotherFunction(3, {})
+
+
+
+
+
+
+
+
+
+const printfirstduo = duo(1, "apple")
+const printsecondduo = duo(true, "messi")
 
 
 const numberbanana = bananas(45)
