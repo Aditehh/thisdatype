@@ -79,7 +79,6 @@ class Sellabe<T> {
 
 
 
-
 const printfirstduo = duo(1, "apple")
 const printsecondduo = duo(true, "messi")
 
